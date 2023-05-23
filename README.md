@@ -36,6 +36,6 @@
 
 * Other high-value and broadly-applicable analytics use cases we identify in the field
 
-# [IMPORTANT NOTE: NEWER AUDIT LOG BLOCK NOW AVAILABLE]
+# IMPORTANT NOTE: NEWER AUDIT LOG BLOCK NOW AVAILABLE
 #### Apr 2023 - This block leverages the older "log sink" to BigQuery methodology. There is a new and improved "Log Analytics" method that would be recommended for any new projects going forward. [Compare the 2 methods here](https://cloud.google.com/blog/products/data-analytics/moving-to-log-analytics-for-bigquery-export-users).
 #### Please refer to the new [Cloud Logging - Log Analytics](https://marketplace.looker.com/marketplace/detail/cloud-logging) block for the updated lookml and dashboards.
