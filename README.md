@@ -7,7 +7,6 @@
 
 **(4) Use as part of an Enterprise Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://looker.com/platform/actions), scheduling, permissions, alerting, parameterization (each user can only see their own data), and more.
 
-
 ### GCP Security Data Structure
 
 * GCP Audit Logs consist of Admin Activity, Data Access, System Events, and Policy Denied logs. This block is built on the mostlogs commonly used for analytics, Admin Activity and Data Access. Docs on these logs are [found here](https://cloud.google.com/logging/docs/audit).
@@ -19,14 +18,11 @@
 * Recommended Filter:
 `protoPayload.@type=type.googleapis.com/google.cloud.audit.AuditLog`
 
-
-
 ### Block Structure
 
 * The ``access`` and ``activity`` views are the foundation of this block and the other views are used for supplemental analysis: a derived table for IAM analysis, an IP geo lookup view, and derived tables used to identify failed access attempts followed by a grant. The model file defines some simple explores. This block uses some SQL specific to BQ to unnest and handle structs, arrays, and JSON data.
 
 * This block utilizes Refinement files for customization. For more information on using refinements to customize marketplace blocks, please see [this documentation](https://docs.looker.com/data-modeling/marketplace/customize-blocks).
-
 
 ### Further analysis in consideration for a future version of this block
 
@@ -37,5 +33,8 @@
 * Other high-value and broadly-applicable analytics use cases we identify in the field
 
 # IMPORTANT NOTE: NEWER AUDIT LOG BLOCK NOW AVAILABLE
+
+This is not an officially supported Google product. This project is not eligible for the [Google Open Source Software Vulnerability Rewards Program](https://bughunters.google.com/open-source-security).
+
 #### Apr 2023 - This block leverages the older "log sink" to BigQuery methodology. There is a new and improved "Log Analytics" method that would be recommended for any new projects going forward. [Compare the 2 methods here](https://cloud.google.com/blog/products/data-analytics/moving-to-log-analytics-for-bigquery-export-users).
 #### Please refer to the new [Cloud Logging - Log Analytics](https://marketplace.looker.com/marketplace/detail/cloud-logging) block for the updated lookml and dashboards.
